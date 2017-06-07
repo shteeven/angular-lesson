@@ -1,23 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService } from './heroes/heroes.service';
-import { Hero } from './heroes/heroes.interface';
-
 
 // move to app.component
 @Component({
   selector: 'app-root',
-  template: `
-      <h1>{{title}}</h1>
-      <pre>{{heroes | json}}</pre>
-    `,
+  template: `<app-heroes></app-heroes>`,
   styles: []
 })
 export class AppComponent implements OnInit {
-  title = 'Tour of Heroes';
-  heroes: Hero[] = [];
-  constructor(private heroesService: HeroesService) {
+
+  constructor() {
   }
   ngOnInit() {
-    this.heroesService.getHeroes().then(heroes => this.heroes = heroes);
   }
 }
