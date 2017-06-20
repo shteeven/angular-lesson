@@ -7,8 +7,7 @@ import {FormControl, FormGroup, } from "@angular/forms";
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styles: [`
-    .hero-form {width: 500px;}
-    .full-width {width: 100%;}
+  .hero-form {width: 500px;}
   `]
 })
 export class HeroesComponent implements OnInit {
