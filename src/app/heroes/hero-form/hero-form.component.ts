@@ -28,7 +28,7 @@ import {FormControl, FormGroup} from "@angular/forms";
   </form>
 
   `,
-  styles: []
+  styles: [`.hero-form {width: 500px;}`]
 })
 export class HeroComponent implements OnInit, OnChanges {
   @Input() hero: Hero;

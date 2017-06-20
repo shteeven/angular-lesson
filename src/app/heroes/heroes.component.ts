@@ -5,10 +5,7 @@ import {Hero} from './heroes.model';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styles: [`
-    .hero-form {width: 500px;}
-    .full-width {width: 100%;}
-  `]
+  styles: [``]
 })
 export class HeroesComponent implements OnInit {
   title = 'Tour of Heroes';
