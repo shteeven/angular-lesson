@@ -10,17 +10,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     MdListModule,
     MdIconModule,
     MdInputModule,
-    ReactiveFormsModule
+    MdButtonModule
   ],
   exports: [
     FormsModule,
+    ReactiveFormsModule,
     MdListModule,
     MdIconModule,
     MdInputModule,
-    ReactiveFormsModule
+    MdButtonModule
   ],
   declarations: []
 })
