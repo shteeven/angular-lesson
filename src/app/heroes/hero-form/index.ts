@@ -1,0 +1,1 @@
+export { HeroFormModule } from './hero-form.module';
