@@ -1,16 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { HeroesModule } from './heroes/heroes.module';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {HeroesModule} from './heroes/heroes.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
     BrowserModule,
-    HeroesModule
+    HeroesModule,
+    BrowserAnimationsModule
   ],
-  declarations: [ AppComponent ],
-  exports: [ AppComponent ],
+  declarations: [AppComponent],
+  exports: [AppComponent],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

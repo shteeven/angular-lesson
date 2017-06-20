@@ -4,37 +4,23 @@ import {
   MdSidenavModule, MdIconModule, MdToolbarModule, MdListModule, MdCheckboxModule,
   MdProgressSpinnerModule, MdButtonToggleModule, MdAutocompleteModule
 } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   imports: [
-    MdSelectModule,
-    MdCardModule,
-    MdButtonModule,
-    MdInputModule,
-    MdMenuModule,
-    MdSidenavModule,
-    MdIconModule,
-    MdProgressSpinnerModule,
-    MdToolbarModule,
+    FormsModule,
     MdListModule,
-    MdCheckboxModule,
-    MdButtonToggleModule,
-    MdAutocompleteModule
+    MdIconModule,
+    MdInputModule,
+    ReactiveFormsModule
   ],
   exports: [
-    MdSelectModule,
-    MdCardModule,
-    MdButtonModule,
-    MdInputModule,
-    MdMenuModule,
-    MdSidenavModule,
-    MdIconModule,
-    MdProgressSpinnerModule,
-    MdToolbarModule,
+    FormsModule,
     MdListModule,
-    MdCheckboxModule,
-    MdButtonToggleModule,
-    MdAutocompleteModule
+    MdIconModule,
+    MdInputModule,
+    ReactiveFormsModule
   ],
   declarations: []
 })

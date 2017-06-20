@@ -11,7 +11,10 @@
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "tsconfig": "tsconfig.app.json",
-      "prefix": "app"
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ]
     }
   ],
   "defaults": {

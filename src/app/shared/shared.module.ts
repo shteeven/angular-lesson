@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { MaterialDesignModule } from '../material-design';
+import {MaterialDesignModule} from '../material-design';
 
 @NgModule({
   imports: [
