@@ -11,9 +11,6 @@ import {Hero} from '../heroes.model';
     <md-icon md-list-icon>folder</md-icon>
     <h4 md-line>{{hero.name}}</h4>
     <p md-line> {{hero.id}} </p>
-    <button md-mini-fab>
-    <md-icon>delete</md-icon>
-    </button>
   </md-list-item>
   <md-divider></md-divider>
 </md-list>

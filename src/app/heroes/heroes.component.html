@@ -1,23 +1,4 @@
 <h1>{{title}}</h1>
 <app-hero-list [heroes]="heroes"></app-hero-list>
 
-<form class="hero-form" [formGroup]="newHero" (ngSubmit)="onAddHero(newHero.value)" novalidate>
-  <table class="full-width" cellspacing="0">
-    <tr>
-      <td>
-        <md-input-container class="full-width">
-          <input mdInput placeholder="Name" formControlName="name">
-        </md-input-container>
-      </td>
-      <td>
-        <md-input-container class="full-width">
-          <input mdInput placeholder="Hometown" formControlName="hometown">
-        </md-input-container>
-      </td>
-    </tr>
-  </table>
-  <md-input-container class="full-width">
-    <input mdInput placeholder="Super Power" formControlName="power">
-  </md-input-container>
-  <button type="submit">Add Hero</button>
-</form>
+<app-hero-form (onSubmit)="addHero($event)"></app-hero-form>

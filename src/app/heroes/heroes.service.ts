@@ -16,7 +16,6 @@ export class HeroesService {
   }
 
   addHero(hero: Hero) {
-    console.log(hero);
     this.heroes = [...this.heroes, hero];
   }
 
