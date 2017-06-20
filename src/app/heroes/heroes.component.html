@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+<md-list>
+  <h3 md-subheader>Heroes</h3>
+  <md-list-item *ngFor="let hero of heroes">
+    <md-icon md-list-icon>folder</md-icon>
+    <h4 md-line>{{hero.name}}</h4>
+    <p md-line> {{hero.id}} </p>
+  </md-list-item>
+  <md-divider></md-divider>
+</md-list>
+
+<form class="hero-form" [formGroup]="newHero" (ngSubmit)="onAddHero(newHero.value)" novalidate>
+  <table class="full-width" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Name" formControlName="name">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="Hometown" formControlName="hometown">
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+  <md-input-container class="full-width">
+    <input mdInput placeholder="Super Power" formControlName="power">
+  </md-input-container>
+  <button type="submit">Add Hero</button>
+</form>
