@@ -1,4 +1,4 @@
 <h1>{{title}}</h1>
-<app-hero-list [heroes]="heroes"></app-hero-list>
+<app-hero-list [heroes]="heroes$ | async"></app-hero-list>
 
 <app-hero-form (onSubmit)="addHero($event)"></app-hero-form>

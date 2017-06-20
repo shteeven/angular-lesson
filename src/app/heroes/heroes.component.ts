@@ -9,18 +9,17 @@ import {Hero} from './heroes.model';
 })
 export class HeroesComponent implements OnInit {
   title = 'Tour of Heroes';
-  heroes: Hero[] = [];
+  heroes$;
 
   constructor(private heroesService: HeroesService) {
   }
 
   addHero({name, hometown, power}) {
     this.heroesService.addHero(new Hero(name, hometown, power));
-    this.getHeroes();
   }
 
   getHeroes() {
-    this.heroesService.getHeroes().then(heroes => this.heroes = heroes);
+    this.heroes$ = this.heroesService.getHeroes();
   }
 
   ngOnInit() {

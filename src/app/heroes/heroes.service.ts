@@ -1,5 +1,11 @@
 import {Injectable} from '@angular/core';
 import {Hero} from './heroes.model';
+import { Store } from '@ngrx/store';
+import { AddHero } from './reducers';
+import {Observable} from "rxjs/Observable";
+
+
+
 
 @Injectable()
 export class HeroesService {
@@ -8,15 +14,18 @@ export class HeroesService {
     new Hero('Tornado'),
     new Hero('Magneta'),
   ];
-  constructor() {
+  constructor(private _store: Store<any>) {
+    this.heroes.map((hero) => {
+      this.addHero(hero)
+    });
   }
 
-  getHeroes(): Promise<Hero[]> {
-    return Promise.resolve(this.heroes); // TODO: get hero data from the server;
+  getHeroes(): Observable<Hero[]> {
+    return this._store.select(store => store.heroes);
   }
 
   addHero(hero: Hero) {
-    this.heroes = [...this.heroes, hero];
+    this._store.dispatch(new AddHero(hero))
   }
 
 }
