@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 
-
 @NgModule({
   imports: [
     BrowserModule,

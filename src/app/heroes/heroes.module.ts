@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HeroesService } from './heroes.service';
 import { HeroesComponent } from './heroes.component';
+import { SharedModule } from '../shared';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule
   ],
   declarations: [HeroesComponent],
   exports: [HeroesComponent],
